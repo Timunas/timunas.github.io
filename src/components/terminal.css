@@ -11,3 +11,6 @@
 .react-terminal-wrapper {
     font-size: 15px;
 }
+.react-terminal-input:before {
+    content: '🚀';
+  }
