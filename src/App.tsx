@@ -15,8 +15,15 @@ import SocialMediaButtons from './components/SocialMediaButtons'
 import { Animated } from 'react-animated-css'
 import MarkdownPreview from '@uiw/react-markdown-preview'
 import markdownFilePath from './assets/SUMMARY.md'
+import {
+	createMuiTheme,
+	responsiveFontSizes,
+	ThemeProvider,
+} from '@material-ui/core/styles'
 
-const useStyles = makeStyles((theme) => ({
+const theme = responsiveFontSizes(createMuiTheme())
+
+const useStyles = makeStyles((_) => ({
 	buttons: {
 		marginTop: '10px',
 	},
@@ -158,14 +165,16 @@ const renderTitle = () => (
 	<Grid item xs={12}>
 		<Container>
 			<Animated animationIn='pulse' animationOut='bounceOut' isVisible={true}>
-				<Typography
-					variant='h2'
-					align='center'
-					gutterBottom
-					style={{ fontFamily: 'JetBrains Mono', color: '#c02739' }}
-				>
-					João Suzana Ferreira
-				</Typography>
+				<ThemeProvider theme={theme}>
+					<Typography
+						variant='h2'
+						align='center'
+						gutterBottom
+						style={{ fontFamily: 'JetBrains Mono', color: '#c02739' }}
+					>
+						João Suzana Ferreira
+					</Typography>
+				</ThemeProvider>
 			</Animated>
 		</Container>
 	</Grid>
