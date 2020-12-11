@@ -1,6 +1,6 @@
 # ⚙️ About me
 
-&#128104;&#127997;&#8205;&#128187;&#127477&#127481 I'm a portuguese software developer currently working at Talkdesk.
+I'm a portuguese software developer currently working at Talkdesk.
 
 # ⚙️ What am I doing?
 
@@ -8,7 +8,7 @@ I'm responsible for developing and maintaining critical microservices such as _A
 
 # ⚙️ Knowledge
 
-&#128104;&#127997;&#8205;&#127891; Master degree in Electrical and Computer Engineering
+Master degree in Electrical and Computer Engineering
 
 ## Languages
 
