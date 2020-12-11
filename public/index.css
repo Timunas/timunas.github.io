@@ -11,13 +11,13 @@ body {
 }
 
 .react-terminal {
-    height: 100%;
+    height: 100% !important;
 }
 
 .react-terminal-wrapper {
-    font-size: 15px;
+    font-size: 15px !important;;
 }
 
 .react-terminal-input:before {
-    content: '🚀';
+    content: '🚀' !important;;
 }
