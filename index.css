@@ -2,3 +2,22 @@ body {
     background-color: #313131;
 }
 
+
+/* Terminal Controller */
+.paper {
+    display: flex;
+    height: 50vh;
+    max-height: 50vh;
+}
+
+.react-terminal {
+    height: 100%;
+}
+
+.react-terminal-wrapper {
+    font-size: 15px;
+}
+
+.react-terminal-input:before {
+    content: '🚀';
+}
