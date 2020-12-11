@@ -23,7 +23,5 @@
       "node_modules/@types","src/typings.d.ts"
     ]
   },
-  "include": [
-    "src"
-, "typings.d.ts"  ]
+  "include": ["src"]
 }

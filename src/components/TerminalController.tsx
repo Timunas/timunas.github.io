@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Terminal, { ColorMode, LineType } from 'react-terminal-ui'
-import './terminal.css'
 import { Paper } from '@material-ui/core'
 import downloadCV from '../lib/DownloadCV'
 
@@ -13,13 +12,28 @@ const getHelpMenu = () => {
 	]
 }
 
+const PaperWrapper = 'terminal-paper-wrapper'
+const TerminalHiddenInput = 'terminal-hidden'
+
 export default function TerminalController() {
 	const [data, setData] = useState([
 		{
 			type: LineType.Output,
-			value: 'Welcome! Type help to check the available commands...',
+			value: 'Welcome! Click and type help to check the available commands...',
 		},
 	])
+
+	useEffect(() => {
+		document.onclick = () => {}
+		document.getElementById(TerminalHiddenInput)?.blur()
+		document.getElementById(PaperWrapper)?.addEventListener(
+			'click',
+			function (e) {
+				document.getElementById(TerminalHiddenInput)?.focus()
+			},
+			false
+		)
+	}, [])
 
 	const handleInput = (input: string) => {
 		let ld = [...data]
@@ -38,6 +52,7 @@ export default function TerminalController() {
 
 	return (
 		<Paper
+			id={PaperWrapper}
 			elevation={10}
 			className='paper'
 			style={{ backgroundColor: '#313131' }}
