@@ -44,7 +44,7 @@ export default function TerminalController() {
 			ld = []
 		} else if (input.toLocaleLowerCase() === 'download-cv') {
 			downloadCV()
-		} else {
+		} else if (input) {
 			ld.push({ type: LineType.Output, value: 'Unrecognized command' })
 		}
 		setData(ld)
