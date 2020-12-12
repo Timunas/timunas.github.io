@@ -20,6 +20,8 @@ import {
 	responsiveFontSizes,
 	ThemeProvider,
 } from '@material-ui/core/styles'
+import DescriptionIcon from '@material-ui/icons/Description'
+import downloadCV from './lib/DownloadCV'
 
 const theme = responsiveFontSizes(createMuiTheme())
 
@@ -80,7 +82,7 @@ const renderSimpleMode = (
 	<React.Fragment>
 		<Grid item xs={12} className={styles.modesButton}>
 			<Container maxWidth='md'>
-				<Box display='flex'>
+				<Box display='flex' justifyContent='space-between'>
 					<Button
 						variant='outlined'
 						style={{ color: '#ffbd69' }}
@@ -95,6 +97,14 @@ const renderSimpleMode = (
 						}
 					>
 						Show me a terminal
+					</Button>
+					<Button
+						variant='outlined'
+						style={{ color: '#ffbd69' }}
+						onClick={() => downloadCV()}
+						startIcon={<DescriptionIcon htmlColor='white' fontSize='small' />}
+					>
+						Download CV
 					</Button>
 				</Box>
 			</Container>
