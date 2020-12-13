@@ -22,6 +22,7 @@ import {
 } from '@material-ui/core/styles'
 import DescriptionIcon from '@material-ui/icons/Description'
 import downloadCV from './lib/DownloadCV'
+import ResponsiveButton from './components/ResponiveButton'
 
 const theme = responsiveFontSizes(createMuiTheme())
 
@@ -83,7 +84,7 @@ const renderSimpleMode = (
 		<Grid item xs={12} className={styles.modesButton}>
 			<Container maxWidth='md'>
 				<Box display='flex' justifyContent='space-between'>
-					<Button
+					<ResponsiveButton
 						variant='outlined'
 						style={{ color: '#ffbd69' }}
 						onClick={() => onClick()}
@@ -97,15 +98,15 @@ const renderSimpleMode = (
 						}
 					>
 						Show me a terminal
-					</Button>
-					<Button
+					</ResponsiveButton>
+					<ResponsiveButton
 						variant='outlined'
 						style={{ color: '#ffbd69' }}
 						onClick={() => downloadCV()}
 						startIcon={<DescriptionIcon htmlColor='white' fontSize='small' />}
 					>
 						Download CV
-					</Button>
+					</ResponsiveButton>
 				</Box>
 			</Container>
 		</Grid>
